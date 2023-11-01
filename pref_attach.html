@@ -1165,27 +1165,6 @@ Jackson Zhou (2023-11-02)
 <li><p>The Barabási-Albert (BA) model aims to model this power law by having new nodes preferentially attach to existing nodes with higher degrees.</p></li>
 </ul>
 </section>
-<section id="the-ba-model" class="slide level2">
-<h2>The BA model</h2>
-<p>Recall that the BA model was covered in the lectures.</p>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>BA model definition</strong></p>
-</div>
-<div class="callout-content">
-<p>The BA model with <span class="math inline">\(m=1\)</span> and initial graph <span class="math inline">\(G_0\)</span> generates a sequence of graphs <span class="math inline">\(G_1,G_2,\cdots\)</span>, where given <span class="math inline">\(G_t\)</span>, <span class="math inline">\(G_{t+1}\)</span> is constructed by:</p>
-<ol type="1">
-<li>Adding a new node to <span class="math inline">\(V(G_t)\)</span>.</li>
-<li>Connecting the new node via an edge to an element of <span class="math inline">\(V(G_t)\)</span>, such that node <span class="math inline">\(i\)</span> is connected to with probability proportional to <span class="math inline">\(d_i\)</span>.</li>
-</ol>
-</div>
-</div>
-</div>
-</section>
 <section id="problem-statement" class="slide level2">
 <h2>Problem statement</h2>
 <p>The BA model generates power-law degree distributions with <span class="math inline">\(\gamma=3\)</span>, while typically <span class="math inline">\(\gamma\in(2,3)\)</span> for real-world networks.</p>
@@ -1231,22 +1210,14 @@ Jackson Zhou (2023-11-02)
 <h2>The connection kernel</h2>
 <p>Krapivsky et al. (2000) focus on connection kernels of the form <span class="math inline">\(\pi(k)=k^\alpha\)</span>, for <span class="math inline">\(\alpha\geq 0\)</span>. Let <span class="math inline">\(\mathcal{N}_{k,t}\)</span> be the expected number of <span class="math inline">\(k\)</span>-degree nodes at time <span class="math inline">\(t\)</span>. The authors derive the rate equation <span class="math display">\[
 \frac{d\mathcal{N}_{k,t}}{dt}=\frac{1}{M_{\alpha,t}}\left[(k-1)^\alpha \mathcal{N}_{k-1,t}-k^\alpha \mathcal{N}_{k,t}\right]+\delta_{k1},
-\]</span> where <span class="math inline">\(M_{\alpha,t}=\sum_{j=1}^\infty j^\alpha \mathcal{N}_{j,t}\)</span> is a normalising constant and <span class="math inline">\(\delta_{k1}=\mathbf{1}_{k=1}\)</span>. This is used to derive the degree distribution <span class="math inline">\([\mathcal{N}_{k,t}/t]_{k=1}^\infty\)</span> of the GN model in three regimes.</p>
-</section>
-<section id="summary-of-regimes" class="slide level2">
-<h2>Summary of regimes</h2>
-<ul>
-<li>In the <span style="color: blue"><strong>sub-linear regime</strong></span> where <span class="math inline">\(\alpha\in(0,1)\)</span>, the limiting degree distribution decays according to a stretched exponential.</li>
-<li>In the <span style="color: green"><strong>linear regime</strong></span> where <span class="math inline">\(\alpha=1\)</span>, the limiting degree distribution decays according to a power law, the negative exponent of which can be adjusted to any <span class="math inline">\(\gamma&gt;2\)</span>.</li>
-<li>In the <span style="color: red"><strong>super-linear regime</strong></span> where <span class="math inline">\(\alpha&gt;1\)</span>, the limiting degree distribution concentrates about <span class="math inline">\(k=1\)</span> with mass one, and has no upper tail.</li>
-</ul>
+\]</span> where <span class="math inline">\(M_{\alpha,t}=\sum_{j=1}^\infty j^\alpha \mathcal{N}_{j,t}\)</span> is a normalising constant and <span class="math inline">\(\delta_{k1}=\mathbf{1}_{k=1}\)</span>. This is used to derive the degree distribution of the GN model in three regimes.</p>
 </section>
 <section id="linear-regime" class="slide level2">
 <h2>Linear regime</h2>
 <p>In this scenario, <span class="math inline">\(\alpha=1\)</span> (the BA model). It is shown that <span class="math display">\[
-\lim_{t\to\infty}\frac{\mathcal{N}_{k,t}}{t}=\frac{4}{k(k+1)(k+2)}\sim 4k^{-3},
+\lim_{t\to\infty}p_t(k)=\frac{4}{k(k+1)(k+2)}\sim 4k^{-3},
 \]</span> which is the same result from the lectures. Additionally, when <span class="math inline">\(\pi(1)=1\)</span> and <span class="math inline">\(\pi(k)=Ck\)</span> for <span class="math inline">\(k\geq2\)</span> and <span class="math inline">\(C&gt;0\)</span>, <span class="math display">\[
-\lim_{t\to\infty}\frac{\mathcal{N}_{k,t}}{t}\sim k^{-(3+\sqrt{1+8/C})/2}.
+\lim_{t\to\infty}p_t(k)\sim k^{-(3+\sqrt{1+8/C})/2}.
 \]</span></p>
 </section></section>
 <section>

@@ -19,19 +19,6 @@ This is not captured by simpler models such as the Erdős-Rényi model.
 
 - The Barabási-Albert (BA) model aims to model this power law by having new nodes preferentially attach to existing nodes with higher degrees.
 
-## The BA model
-
-Recall that the BA model was covered in the lectures.
-
-::: {.callout-note}
-## BA model definition
-
-The BA model with $m=1$ and initial graph $G_0$ generates a sequence of graphs $G_1,G_2,\cdots$, where given $G_t$, $G_{t+1}$ is constructed by:
-
-1. Adding a new node to $V(G_t)$.
-2. Connecting the new node via an edge to an element of $V(G_t)$, such that node $i$ is connected to with probability proportional to $d_i$.
-:::
-
 ## Problem statement
 
 The BA model generates power-law degree distributions with $\gamma=3$, while typically $\gamma\in(2,3)$ for real-world networks.
@@ -65,25 +52,19 @@ $$
 \frac{d\mathcal{N}_{k,t}}{dt}=\frac{1}{M_{\alpha,t}}\left[(k-1)^\alpha \mathcal{N}_{k-1,t}-k^\alpha \mathcal{N}_{k,t}\right]+\delta_{k1},
 $$
 where $M_{\alpha,t}=\sum_{j=1}^\infty j^\alpha \mathcal{N}_{j,t}$ is a normalising constant and $\delta_{k1}=\mathbf{1}_{k=1}$.
-This is used to derive the degree distribution $[\mathcal{N}_{k,t}/t]_{k=1}^\infty$ of the GN model in three regimes.
-
-## Summary of regimes
-
-- In the [**sub-linear regime**]{style="color: blue"} where $\alpha\in(0,1)$, the limiting degree distribution decays according to a stretched exponential.
-- In the [**linear regime**]{style="color: green"} where $\alpha=1$, the limiting degree distribution decays according to a power law, the negative exponent of which can be adjusted to any $\gamma>2$.
-- In the [**super-linear regime**]{style="color: red"} where $\alpha>1$, the limiting degree distribution concentrates about $k=1$ with mass one, and has no upper tail.
+This is used to derive the degree distribution of the GN model in three regimes.
 
 ## Linear regime
 
 In this scenario, $\alpha=1$ (the BA model).
 It is shown that
 $$
-\lim_{t\to\infty}\frac{\mathcal{N}_{k,t}}{t}=\frac{4}{k(k+1)(k+2)}\sim 4k^{-3},
+\lim_{t\to\infty}p_t(k)=\frac{4}{k(k+1)(k+2)}\sim 4k^{-3},
 $$
 which is the same result from the lectures.
 Additionally, when $\pi(1)=1$ and $\pi(k)=Ck$ for $k\geq2$ and $C>0$,
 $$
-\lim_{t\to\infty}\frac{\mathcal{N}_{k,t}}{t}\sim k^{-(3+\sqrt{1+8/C})/2}.
+\lim_{t\to\infty}p_t(k)\sim k^{-(3+\sqrt{1+8/C})/2}.
 $$
 
 # Numerical experiments {background="#b2cc9b"}
