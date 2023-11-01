@@ -90,11 +90,11 @@ $$
 
 ## Linear regime: degree distribution
 
-![Figure 3: Log-log plot of the degree distribution of linear GN models with $n=10000$. Each point represents an average over four repetitions. The dotted lines represent fitted lines, and the $\gamma$ estimates are in parentheses.](img/al_1.png){width="55%" height="55%"}
+![Figure 2: Log-log plot of the degree distribution of linear GN models with $n=10000$. Each point represents an average over four repetitions. The dotted lines represent fitted lines, and the $\gamma$ estimates are in parentheses.](img/al_1.png){width="55%" height="55%"}
 
 ## Linear regime: estimated gamma
 
-![Figure 4: $\gamma$ vs. $C$ for the linear GN model across a range of $n$ values. Each point represents an average over four repetitions. The red curve represents the theoretical relationship.](img/al_2.png){width="55%" height="55%"}
+![Figure 3: $\gamma$ vs. $C$ for the linear GN model across a range of $n$ values. Each point represents an average over four repetitions. The red curve represents the theoretical relationship.](img/al_2.png){width="55%" height="55%"}
 
 # Questions? {background="#9cb9d6"}
 
