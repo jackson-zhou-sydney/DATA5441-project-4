@@ -67,22 +67,13 @@ $$
 where $M_{\alpha,t}=\sum_{j=1}^\infty j^\alpha \mathcal{N}_{j,t}$ is a normalising constant and $\delta_{k1}=\mathbf{1}_{k=1}$.
 This is used to derive the degree distribution $[\mathcal{N}_{k,t}/t]_{k=1}^\infty$ of the GN model in three regimes.
 
-## [Sub-linear regime]{style="color: blue"}
+## Summary of regimes
 
-In this scenario $\alpha\in(0,1)$.
-It is shown that
-\begin{align}
-  &\lim_{t\to\infty}\frac{\mathcal{N}_{k,t}}{t}=\frac{\mu(\alpha)}{k^\alpha}\prod_{j=1}^k\left[1+\frac{\mu(\alpha)}{j^\alpha}\right]^{-1} \\
-  &\stackrel{k}{\sim}
-  \begin{cases}
-        k^{-\alpha}\exp\left[-\mu(\alpha)\frac{k^{1-\alpha}-2^{1-\alpha}}{1- \alpha}\right] & \alpha\in(\frac{1}{2},1), \\
-        k^{\mu(\alpha)^2-1/2}\exp\left[-2\mu(\alpha)\sqrt{k}\right] & \alpha=\frac{1}{2}, \\
-        k^{-\alpha}\exp\left[-\mu(\alpha)\frac{k^{1-\alpha}}{1-\alpha}+\frac{\mu(\alpha)^2}{2}\frac{k^{1-2\alpha}}{1-2\alpha}\right] & \alpha\in(\frac{1}{3},\frac{1}{2}), \\
-        \cdots
-    \end{cases}
-\end{align}
+- In the [**sub-linear regime**]{style="color: blue"} where $\alpha\in(0,1)$, the limiting degree distribution decays according to a stretched exponential.
+- In the [**linear regime**]{style="color: green"} where $\alpha=1$, the limiting degree distribution decays according to a power law, the negative exponent of which can be adjusted to any $\gamma>2$.
+- In the [**super-linear regime**]{style="color: red"} where $\alpha>1$, the limiting degree distribution concentrates about $k=1$ with mass one, and has no upper tail.
 
-## [Linear regime]{style="color: green"}
+## Linear regime
 
 In this scenario, $\alpha=1$ (the BA model).
 It is shown that
@@ -95,43 +86,15 @@ $$
 \lim_{t\to\infty}\frac{\mathcal{N}_{k,t}}{t}\sim k^{-(3+\sqrt{1+8/C})/2}.
 $$
 
-## [Super-linear regime]{style="color: red"}
-
-In this scenario, $\alpha>1$.
-It is shown that:
-
-- For $\alpha>2$, a single dominant *gel node* is directly linked with almost all of the nodes in the limit as $t\to\infty$.
-- For $\alpha\in(\frac{m+1}{m},\frac{m}{m-1})$ with $m=2,3,\cdots$, $\lim_{t\to\infty}\sum_{k=m+1}^\infty\mathcal{N}_{k,t}<\infty$, while $\mathcal{N}_{k,t}\stackrel{t}{\sim}t^{k-(k-1)\alpha}$ for $1\leq k\leq m$.
-
-In both cases, $\lim_{t\to\infty}\mathcal{N}_{k,t}/t=\mathbf{1}_{k=1}.$
-
-## Summary
-
-- In the [**sub-linear regime**]{style="color: blue"} where $\alpha\in(0,1)$, the limiting degree distribution decays according to a stretched exponential.
-- In the [**linear regime**]{style="color: green"} where $\alpha=1$, the limiting degree distribution decays according to a power law, the negative exponent of which can be adjusted to any $\gamma>2$.
-- In the [**super-linear regime**]{style="color: red"} where $\alpha>1$, the limiting degree distribution concentrates about $k=1$ with mass one, and has no upper tail.
-
 # Numerical experiments {background="#b2cc9b"}
 
-## [Sub-linear regime]{style="color: blue"}
-
-![Figure 2: Log-log plot of the degree distribution of sub-linear GN models, the BA model $(\alpha=1)$, and the Poisson Erdős-Rényi model, with $n=10000$. Each point represents an average over four repetitions. The dotted lines represent the limiting distributions.](img/sub.png){width="55%" height="55%"}
-
-## [Linear regime (1)]{style="color: green"}
+## Linear regime: degree distribution
 
 ![Figure 3: Log-log plot of the degree distribution of linear GN models with $n=10000$. Each point represents an average over four repetitions. The dotted lines represent fitted lines, and the $\gamma$ estimates are in parentheses.](img/al_1.png){width="55%" height="55%"}
 
-## [Linear regime (2)]{style="color: green"}
+## Linear regime: estimated gamma
 
 ![Figure 4: $\gamma$ vs. $C$ for the linear GN model across a range of $n$ values. Each point represents an average over four repetitions. The red curve represents the theoretical relationship.](img/al_2.png){width="55%" height="55%"}
-
-## [Super-linear regime (1)]{style="color: red"}
-
-![Figure 5: Log-log plot of the degree distribution of super-linear GN models and the BA model $(\alpha=1)$, with $n=10000$. Each point represents an average over four repetitions. The proportions of 1-degree nodes are in parentheses.](img/sup_1.png){width="55%" height="55%"}
-
-## [Super-linear regime (2)]{style="color: red"}
-
-![Figure 6: Proportion of 1-degree nodes vs. $\alpha$ for the super-linear GN model and BA model $(\alpha=1)$ across a range of $n$ values. Each point represents an average over four repetitions. The red line represents the theoretical relationship for $\alpha>1$.](img/sup_2.png){width="55%" height="55%"}
 
 # Questions? {background="#9cb9d6"}
 
