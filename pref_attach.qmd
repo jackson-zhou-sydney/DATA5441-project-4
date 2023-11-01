@@ -15,7 +15,7 @@ format:
 ## Power-law degree distributions
 
 - The degree distributions of real-world networks are observed to follow a power law, with $p(k)\propto k^{-\gamma}$ for some $\gamma>0$.
-This is not captured by simpler models such as the Erdős-Rényi and configuration models.
+This is not captured by simpler models such as the Erdős-Rényi model.
 
 - The Barabási-Albert (BA) model aims to model this power law by having new nodes preferentially attach to existing nodes with higher degrees.
 
